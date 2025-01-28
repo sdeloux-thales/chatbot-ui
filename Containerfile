@@ -4,5 +4,5 @@ COPY requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir --upgrade -r /chat/requirements.txt
 COPY chatbot_ui.py .
-EXPOSE 8080
+EXPOSE 8501
 ENTRYPOINT [ "streamlit", "run", "chatbot_ui.py" ]
