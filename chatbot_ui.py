@@ -27,8 +27,6 @@ def checking_model_service():
         try:
             request_cpp = requests.get(f'{model_service}/models', **request_kwargs, verify=False)
             request_ollama = requests.get(f'{model_service[:-2]}api/tags', **request_kwargs, verify=False)
-            print("request_cpp status : " + request_cpp.status_code)
-            print("request_ollama status : " + request_ollama.status_code)
             if request_cpp.status_code == 200:
                 server = "Llamacpp_Python"
                 ready = True
