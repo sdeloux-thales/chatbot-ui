@@ -20,7 +20,7 @@ if model_service_bearer is not None:
 @st.cache_resource(show_spinner=False)
 def checking_model_service():
     start = time.time()
-    print("Checking Model Service Availability..." + model_service)
+    print("Checking Model Service Availability on url " + model_service)
     ready = False
     while not ready:
         try:
