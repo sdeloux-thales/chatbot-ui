@@ -34,7 +34,8 @@ def checking_model_service():
             elif request_ollama.status_code == 200:
                 server = "Ollama"
                 ready = True        
-        except:
+        except Exception as e:
+            print(e)
             pass
         time.sleep(1)
     print(f"{server} Model Service Available")
